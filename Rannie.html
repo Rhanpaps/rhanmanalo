@@ -1,0 +1,99 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Self-Introduction</title>
+	<link href="Assets/style.css" rel="stylesheet" type="text/css">
+<style>
+.n1
+{
+font-size: 50px;
+font-weight: 100;
+font-family: arial;
+text-align: center;
+background-color: orange;
+}
+
+.box
+{
+width: 50px;
+height: 50px;
+background-color: #000000;
+}
+
+	
+
+</style>
+
+</head>
+<body>
+	<h1 class="n1">Self-Introduction</h1>
+	<h2>Know about me</h2>
+	<p>This is my self-introduction. </p>
+	<p> My name is Rannie. </p>
+	<img src="MyPicture.webp" alt="descriptive text">
+	<ul>
+		<li>Age:32</li>
+		<li>Religion:Catholic</li>
+		<li>BirthPlace:Lipa</li>
+		<li>Skill:Japanese</li>
+	</ul>
+	
+	<div class="box" id="myBox"></div>
+	<button onclick="changeColor()"> Boom </button>
+	<div id="myBox2">
+	こんにちわ！
+</div>
+
+	<button id="show">SHOW</button>
+	<button id="hide">HIDE</button>
+	
+
+	<div id="myBox3">
+	Let's Go!
+</div>
+
+
+	<button id="fadeInButton">FadeIn</button>
+	<button id="fadeOutButton">FadeOut</button>
+
+</body>
+
+<script>
+
+function changeColor(){
+	var box = document.getElementById("myBox");
+	var randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+	box.style.backgroundColor= randomColor;
+}
+
+$(document).ready(function(){
+ $('#show').click(function(){
+  $('#myBox2').show();
+			});
+  $('#hide').click(function(){
+  $('#myBox2').hide();
+			});
+
+});
+
+$(document).ready(function(){
+ $('#fadeInButton').click(function(){
+  $('#myBox3').fadeIn('slow');
+			});
+  $('#fadeOutButton').click(function(){
+  $('#myBox3').fadeOut('slow');
+			});
+
+});
+
+</script>
+
+
+
+
+
+
+
+
+</html>
